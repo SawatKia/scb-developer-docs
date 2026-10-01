@@ -1,9 +1,19 @@
 /** Normalize any href/URL into a "#/documents/..." route, or null if not a docs route. */
 export function normalizeRoute(href: string): string | null {
-  const i = href.indexOf("#/");
-  if (i === -1) return null;
-  const r = href.slice(i).split("?")[0].replace(/\/+$/, "");
-  return r.startsWith("#/documents") ? r : null;
+  if (!href) return null;
+  const hashIdx = href.indexOf("#/documents");
+  if (hashIdx !== -1) {
+    const after = href.slice(hashIdx);
+    return after.split("?")[0].replace(/\/+$/, "");
+  }
+  const assetMatch = href.match(/\/assets\/documents\/([^\?#]+)/);
+  if (assetMatch) {
+    const p = assetMatch[1].replace(/\/+$/, "");
+    if (p.endsWith(".html")) {
+      return `#/documents/${p}`;
+    }
+  }
+  return null;
 }
 
 /** Deterministic route -> relative .md path (under docs/). */

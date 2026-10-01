@@ -1,4 +1,4 @@
-import { chromium, type Page } from "playwright";
+import { chromium, type Page, type Frame } from "playwright";
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { normalizeRoute, routeToFile } from "./routes.js";
@@ -11,7 +11,8 @@ export interface Options {
   include?: RegExp; headful: boolean; selectors: string[];
 }
 export const defaults = {
-  base: "https://developer.scb/", max: 500, delayMs: 500, headful: false, selectors: CONTENT_SELECTORS,
+  base: "https://developer.scb/#/documents/documentation/basics/getting-started.html",
+  max: 500, delayMs: 400, headful: false, selectors: CONTENT_SELECTORS,
 };
 
 async function open(opts: Options) {
@@ -22,21 +23,37 @@ async function open(opts: Options) {
   if (res && res.status() >= 400) {
     console.warn(`! ${opts.base} returned HTTP ${res.status()} — blocked? try --headful or a different network`);
   }
-  return { browser, page };
+  let frame = page.frames().find((f) => f.url().includes("assets/documents"));
+  if (!frame) {
+    await page.waitForTimeout(2000);
+    frame = page.frames().find((f) => f.url().includes("assets/documents"));
+  }
+  return { browser, page, frame: frame ?? page.mainFrame() };
 }
 
-async function go(page: Page, route: string, delayMs: number) {
-  await page.evaluate((r) => { location.hash = r; }, route);
-  await page.waitForTimeout(600);
-  await waitForStable(page);
-  await expandAll(page);
-  await page.waitForTimeout(delayMs);
+async function go(page: Page, frame: Frame, route: string, delayMs: number): Promise<Frame> {
+  const assetPath = route.replace(/^#\/documents\/?/, "");
+  const assetUrl = "https://developer.scb/assets/documents/" + assetPath;
+  try {
+    await frame.goto(assetUrl, { waitUntil: "domcontentloaded" });
+  } catch {
+    const currentFrame = page.frames().find((f) => f.url().includes("assets/documents"));
+    if (currentFrame) {
+      await currentFrame.goto(assetUrl, { waitUntil: "domcontentloaded" });
+      frame = currentFrame;
+    }
+  }
+  await waitForStable(frame);
+  await expandAll(frame);
+  if (delayMs > 0) await page.waitForTimeout(delayMs);
+  return page.frames().find((f) => f.url().includes("assets/documents")) || frame;
 }
 
 export async function crawl(opts: Options): Promise<{ changed: number; total: number; failed: number }> {
   const manifestPath = join(opts.repoRoot, "scrape-manifest.json");
   const manifest = await loadManifest(manifestPath);
-  const { browser, page } = await open(opts);
+  const { browser, page, frame: initialFrame } = await open(opts);
+  let frame = initialFrame;
   const now = new Date().toISOString();
   const queue: string[] = [];
   const seen = new Set<string>();
@@ -48,8 +65,9 @@ export async function crawl(opts: Options): Promise<{ changed: number; total: nu
   };
 
   try {
-    await waitForStable(page);
-    await expandAll(page);
+    await waitForStable(frame);
+    await expandAll(frame);
+    enqueue(await discoverHrefs(frame));
     enqueue(await discoverHrefs(page));
     enqueue(opts.seeds);
     if (!queue.length) console.warn("! no #/documents links discovered on landing page — pass --seed <url> or run `inspect`");
@@ -59,9 +77,9 @@ export async function crawl(opts: Options): Promise<{ changed: number; total: nu
       const route = queue.shift()!;
       done++;
       try {
-        await go(page, route, opts.delayMs);
-        enqueue(await discoverHrefs(page));
-        const ex = await extract(page, opts.selectors);
+        frame = await go(page, frame, route, opts.delayMs);
+        enqueue(await discoverHrefs(frame));
+        const ex = await extract(frame, opts.selectors);
         const body = toMarkdown(ex.html);
         if (body.length < 80) { console.log(`skip (empty) ${route}`); continue; }
         const hash = sha256(body);
@@ -70,7 +88,7 @@ export async function crawl(opts: Options): Promise<{ changed: number; total: nu
         if (!prev || prev.hash !== hash) {
           const out = join(opts.repoRoot, "docs", file);
           await mkdir(dirname(out), { recursive: true });
-          await writeFile(out, withFrontmatter(body, { sourceUrl: opts.base.replace(/\/?$/, "/") + route, route, hash }));
+          await writeFile(out, withFrontmatter(body, { sourceUrl: "https://developer.scb/" + route, route, hash }));
           changed++;
           console.log(`${prev ? "updated" : "new    "} ${file}  [${ex.selector}]`);
         } else console.log(`same    ${file}`);
@@ -90,19 +108,20 @@ export async function crawl(opts: Options): Promise<{ changed: number; total: nu
 
 /** Dump rendered DOM + links for the first route so selectors can be tuned. */
 export async function inspect(opts: Options, route?: string): Promise<void> {
-  const { browser, page } = await open(opts);
+  const { browser, page, frame: initialFrame } = await open(opts);
+  let frame = initialFrame;
   try {
-    await waitForStable(page);
-    await expandAll(page);
-    const links = (await discoverHrefs(page)).map(normalizeRoute).filter(Boolean) as string[];
+    await waitForStable(frame);
+    await expandAll(frame);
+    const links = (await discoverHrefs(frame)).map(normalizeRoute).filter(Boolean) as string[];
     const target = route ?? links[0];
-    if (target) await go(page, target, opts.delayMs);
+    if (target) frame = await go(page, frame, target, opts.delayMs);
     const dir = join(opts.repoRoot, ".debug");
     await mkdir(dir, { recursive: true });
-    await writeFile(join(dir, "rendered.html"), await page.content());
+    await writeFile(join(dir, "rendered.html"), await frame.content());
     await writeFile(join(dir, "links.txt"), [...new Set(links)].join("\n") + "\n");
     await page.screenshot({ path: join(dir, "page.png"), fullPage: true });
-    const ex = await extract(page, opts.selectors);
+    const ex = await extract(frame, opts.selectors);
     await writeFile(join(dir, "extracted.md"), toMarkdown(ex.html));
     console.log(`inspected ${target ?? "(landing)"}; selector=${ex.selector}; ${new Set(links).size} routes → .debug/`);
   } finally { await browser.close(); }
