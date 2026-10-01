@@ -25,7 +25,7 @@ if (cmd === "inspect") {
   const r = await crawl(opts);
   console.log(`done: ${r.total} routes, ${r.changed} changed, ${r.failed} failed`);
   if (flag("commit") || flag("push")) publish(opts.repoRoot, flag("push"), `${r.changed} changed`);
-  if (r.failed && !r.total - r.failed) process.exit(1);
+  if (r.total > 0 && r.failed === r.total) process.exit(1);
 } else {
   console.error("usage: scrape | inspect [--seed <route>] [--base url] [--include regex] [--max n] [--delay ms] [--selector css] [--headful] [--commit] [--push]");
   process.exit(2);

@@ -1,5 +1,5 @@
 import { chromium, type Page } from "playwright";
-import { mkdir, writeFile, readFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { normalizeRoute, routeToFile } from "./routes.js";
 import { CONTENT_SELECTORS, discoverHrefs, expandAll, extract, waitForStable } from "./extractor.js";
@@ -105,6 +105,5 @@ export async function inspect(opts: Options, route?: string): Promise<void> {
     const ex = await extract(page, opts.selectors);
     await writeFile(join(dir, "extracted.md"), toMarkdown(ex.html));
     console.log(`inspected ${target ?? "(landing)"}; selector=${ex.selector}; ${new Set(links).size} routes → .debug/`);
-    void readFile;
   } finally { await browser.close(); }
 }
