@@ -1,1 +1,459 @@
-{ "routes": {} }
+{
+  "routes": {
+    "#/documents/api-reference-index/authentication/get-oauth-authorize.v2.html": {
+      "file": "api-reference-index/authentication/get-oauth-authorize.v2.md",
+      "hash": "bb6869b543e3c724a60f22408ad81fdfdd9f62c7c1541d4a568e25592ffe6ad8",
+      "title": "GET /​v2/​oauth/​authorize",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/authentication/post-oauth-token.html": {
+      "file": "api-reference-index/authentication/post-oauth-token.md",
+      "hash": "359b8129a057bea14db1697156e21a7e1608341f4257ecb3a336a354384d3a9a",
+      "title": "POST /​v1/​oauth/​token",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/authentication/post-oauth-token-refresh.html": {
+      "file": "api-reference-index/authentication/post-oauth-token-refresh.md",
+      "hash": "7169620f3f16217b7635440d01dc679d8131fc89022c7b89af5d789d0b2b272d",
+      "title": "POST /​v1/​oauth/​token/​refresh",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-credit-confirm.html": {
+      "file": "api-reference-index/credit-transfer/post-credit-confirm.md",
+      "hash": "ae0dc395f04bdac8245734696b72cb32fe30116226433390c93fedbd1e850982",
+      "title": "POST /​v1/​payment/​transfer/​fcd/​credit/​confirm",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-credit-confirm-response-code.html": {
+      "file": "api-reference-index/credit-transfer/post-credit-confirm-response-code.md",
+      "hash": "612c387e578cb97b87b8e513dca42e42e46bc9596e4b088613e8104f3bae11d8",
+      "title": "Credit Transfer Confirm Response Code",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-credit-initiate.html": {
+      "file": "api-reference-index/credit-transfer/post-credit-initiate.md",
+      "hash": "8cca2cd73fa07f0864089e3f1a70bcbb6fe473d1e36ba14dc31df1b49de41e51",
+      "title": "POST /​v1/​payment/​transfer/​fcd/​credit/​initiate",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-credit-initiate-response-code.html": {
+      "file": "api-reference-index/credit-transfer/post-credit-initiate-response-code.md",
+      "hash": "0792b03e0c5bc44b61254f6425cbcee77d3454833374410b4f818bb0b827a04c",
+      "title": "Credit Transfer Initiate Response Code",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-debit-confirm.html": {
+      "file": "api-reference-index/credit-transfer/post-debit-confirm.md",
+      "hash": "07cbae040fbe414422762f0128c1fa31daee2f3b491c54a5e1a02e7933321a00",
+      "title": "POST /​v1/​payment/​transfer/​fcd/​debit/​confirm",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-debit-confirm-response-code.html": {
+      "file": "api-reference-index/credit-transfer/post-debit-confirm-response-code.md",
+      "hash": "bf33638b161443aeb537dedd2160d6170043d8ffb0cdd19d8447cea251ae8892",
+      "title": "Debit Transfer Confirm Response Code",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-debit-initiate.html": {
+      "file": "api-reference-index/credit-transfer/post-debit-initiate.md",
+      "hash": "4962e1381b80806e684b6804e3eb96149e256b4261b3a69113130a945f85377b",
+      "title": "POST /​v1/​payment/​transfer/​fcd/​debit/​initiate",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-debit-initiate-response-code.html": {
+      "file": "api-reference-index/credit-transfer/post-debit-initiate-response-code.md",
+      "hash": "024843afabfd84c7115904076510358d9ee5a0e38395579388f27d65ba6e1630",
+      "title": "Debit Transfer Initiate Response Code",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-inquiry.html": {
+      "file": "api-reference-index/credit-transfer/post-inquiry.md",
+      "hash": "7d3b6848b44b41c40f8fd86d401858c03b0bf1470244b8706f24c6b0bfe5efed",
+      "title": "POST /​v1/​payment/​transfer/​fcd/​inquiry",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/credit-transfer/post-inquiry-response-code.html": {
+      "file": "api-reference-index/credit-transfer/post-inquiry-response-code.md",
+      "hash": "60ccbf21aefedf6f95f9a1dc2a029e008285e187bf451535c8e38f68f5b53764",
+      "title": "Debit Credit Transfer Inquiry Response Code",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/customer-profile/get-customer-profile-v2.html": {
+      "file": "api-reference-index/customer-profile/get-customer-profile-v2.md",
+      "hash": "e446b638d1b8f49263f1c422b47b1ac140dc460bb90784b59de4d17298af9e7e",
+      "title": "GET /​v2/​customers/​profile",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/host-to-host-registration-status.html": {
+      "file": "api-reference-index/direct-debit-payment/host-to-host-registration-status.md",
+      "hash": "e0a016977fd44d215737272868da35531215b523271e506df1ddcc943a9dadf5",
+      "title": "Host to Host Registration Status (POST)",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/host-to-host-web-payment-status.html": {
+      "file": "api-reference-index/direct-debit-payment/host-to-host-web-payment-status.md",
+      "hash": "5fa302367536a20fa904d11e3271d67a2f6e896e084df7bf0232ee69851872b7",
+      "title": "Host to Host Web Payment Status (POST)",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/post-api-pay.html": {
+      "file": "api-reference-index/direct-debit-payment/post-api-pay.md",
+      "hash": "76245a2f6a7b0a2ab9868e254851c1193165f030f3d3691c7860de4ea190d6e3",
+      "title": "POST /​v1/​payment/​direct/​ddpay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/post-payment-inquiry.html": {
+      "file": "api-reference-index/direct-debit-payment/post-payment-inquiry.md",
+      "hash": "ac2cb64de228c97332487407aa577241cf1941af8ab7db6d2509f37878a70b32",
+      "title": "POST /​v1/​payment/​inquiry",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/post-redirect-pay.html": {
+      "file": "api-reference-index/direct-debit-payment/post-redirect-pay.md",
+      "hash": "7c6008946bcbfcf48de92efb65214ef4a5a50ac5a195ba20d25dacca72f4a50c",
+      "title": "POST /​v1/​payment/​web/​ddpay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/post-registration-init.html": {
+      "file": "api-reference-index/direct-debit-payment/post-registration-init.md",
+      "hash": "2bf348097e9df9fb52ac69116324bc9c75897902148252d15e50e03681973d53",
+      "title": "POST /​v1/​registration/​web/​init",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/direct-debit-payment/post-registration-inquiry.html": {
+      "file": "api-reference-index/direct-debit-payment/post-registration-inquiry.md",
+      "hash": "2b3d4f2d3b168ff91483bf3fbf2ff8b119814b46e5d517b7ecc9b39a57a29135",
+      "title": "POST /​v1/​registration/​inquiry",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/mae-manee-marchants/get-mae-manee-profile.html": {
+      "file": "api-reference-index/mae-manee-marchants/get-mae-manee-profile.md",
+      "hash": "97028f529fb83c321c1fa33cb3aad98d672a6e05971c1e24e526ac657dd98c60",
+      "title": "GET /​v1/​maemanee/​merchant/​profile",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/mae-manee-marchants/get-mae-manee-transaction-history.html": {
+      "file": "api-reference-index/mae-manee-marchants/get-mae-manee-transaction-history.md",
+      "hash": "b763bcd7c6a7cb5fd668a6c191de6cca73bea11899afd2ce0c0b19a32f6cd703",
+      "title": "POST /​v1/​maemanee/​payment/​transaction/​getlist",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/mae-manee-marchants/get-mae-manee-transaction.html": {
+      "file": "api-reference-index/mae-manee-marchants/get-mae-manee-transaction.md",
+      "hash": "bf63c226cebe02969bcd513656cffa84ca0fcf83563b5715a480e36192f3097e",
+      "title": "POST /​v1/​maemanee/​payment/​transaction/​getone",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/mae-manee-marchants/post-mae-manee-payment-link.html": {
+      "file": "api-reference-index/mae-manee-marchants/post-mae-manee-payment-link.md",
+      "hash": "1c5efc34da9895f8b91f21484e7fc85e845c275350eaa33a77c97861fcd980f2",
+      "title": "POST /​v1/​maemanee/​payment/​paymentlink",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/mae-manee-marchants/post-mae-manee-qr-payment.html": {
+      "file": "api-reference-index/mae-manee-marchants/post-mae-manee-qr-payment.md",
+      "hash": "031bb26a32cd6926f2b98c3250872cb96734ed38a3a5173717f37c498a613b18",
+      "title": "POST /​v1/​maemanee/​payment/​qr/​create",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/payment/post-deeplink-transaction.html": {
+      "file": "api-reference-index/payment/post-deeplink-transaction.md",
+      "hash": "ff192f2c2f05fe22d0a8d1df17a3e229a3684e239acb35cb5fa063b4483e4456",
+      "title": "POST /​v3/​deeplink/​transactions",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/payment/retrieving-transaction-detail.html": {
+      "file": "api-reference-index/payment/retrieving-transaction-detail.md",
+      "hash": "13733d9724d3e757e9d687d791adaa449d949f5e1927a22e2fd9d34a82be6f1d",
+      "title": "GET /​v2/​transactions/​{transactionId}",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/get-billpayment-inquiry.html": {
+      "file": "api-reference-index/qr-payments/get-billpayment-inquiry.md",
+      "hash": "a2d12fd00cc05d00e0e745e53f090683d663e454bf3e3417106ca84c67a0305b",
+      "title": "GET /​partners/​v1/​payment/​billpayment/​inquiry?{param}={value}",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/get-billpayment-transactions.html": {
+      "file": "api-reference-index/qr-payments/get-billpayment-transactions.md",
+      "hash": "61b5d3afea1f0cb2f97fd071e45b02b460de0c571f52f563dfdfeca8c362a059",
+      "title": "GET /​v1/​payment/​billpayment/​transactions/​{transRef}?{param}={value}",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/get-qrcs-inquiry.html": {
+      "file": "api-reference-index/qr-payments/get-qrcs-inquiry.md",
+      "hash": "7c3752d6c801937c6a47cf93d74b84fa57ea81f581d6dea46128534e0ede3b78",
+      "title": "GET /​v1/​payment/​qrcode/​creditcard/​{qrId}",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-billpayment-inquiry.html": {
+      "file": "api-reference-index/qr-payments/post-billpayment-inquiry.md",
+      "hash": "4915f12d75436e398497bee2c789cd84e778088ab4198488d4a91c9bcc3f72a1",
+      "title": "POST /​v3/​payment/​billpayment/​inquiry",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-bscanc-confirm-payment.html": {
+      "file": "api-reference-index/qr-payments/post-bscanc-confirm-payment.md",
+      "hash": "7ba10977cab55d39f3d138a53c9acde1c55565806a4c0a988e1b3ddf528504cb",
+      "title": "POST /​v1/​payment/​merchant/​rtp/​confirm",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-bscanc-refund-payment.html": {
+      "file": "api-reference-index/qr-payments/post-bscanc-refund-payment.md",
+      "hash": "926747c32d48b48fad1f15ceb6aab2fc6fe9a65650bc8ed27bd3e55fd559b420",
+      "title": "POST /​v1/​payment/​merchant/​rtp/​refund",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-cancel.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-cancel.md",
+      "hash": "93aeb09ad72b434dddfc92ac85c410cc45447993a7d165b218f7e57f3ff88050",
+      "title": "POST /​v1/​payment/​ewallets/​cancel",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-inquire.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-inquire.md",
+      "hash": "db09dffd10124dc0e8bed60e4f14ba205f0da58ebe51facb03fc5c21bb62299f",
+      "title": "POST /​v1/​payment/​ewallets/​inquire",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-pay.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-pay.md",
+      "hash": "27f2b0cb550128c586f4b2b27c93d99ab03725fdae9814b3b6b7abbcc777f6bd",
+      "title": "POST /​v1/​payment/​ewallets/​pay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-qrcode-cancel.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-qrcode-cancel.md",
+      "hash": "9d9d738ec420784e8d01fbe1dabaa50ee808f00f729d289a3330e3a510e60f3c",
+      "title": "POST /​v1/​payment/​ewallets/​qrcode/​cancel",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-qrcode-create.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-qrcode-create.md",
+      "hash": "ec2b2ff61875a1a90a1893a7628a903b9d722a0926560972dd18874d46b65a40",
+      "title": "POST /​v1/​payment/​ewallets/​qrcode/​create",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-ewallets-refund.html": {
+      "file": "api-reference-index/qr-payments/post-ewallets-refund.md",
+      "hash": "a8cc5c0a294e0839de81066949318c04fa9481b30f813a928b67d79e7fd64952",
+      "title": "POST /​v1/​payment/​ewallets/​refund",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-qrcode-create.html": {
+      "file": "api-reference-index/qr-payments/post-qrcode-create.md",
+      "hash": "ef44c6a123b5bc4fc3b7696f7a0911d9a5bed6b3411ee7778b278aa622dff965",
+      "title": "POST /​v1/​payment/​qrcode/​create",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-qrcode-create-v2.html": {
+      "file": "api-reference-index/qr-payments/post-qrcode-create-v2.md",
+      "hash": "625df4cf9e43cf2de05c1e08b1eff4f3aef4ea849aea50271f43ab627b048468",
+      "title": "POST /​v2/​payment/​qrcode/​create",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/qr-payments/post-qrcode-void.html": {
+      "file": "api-reference-index/qr-payments/post-qrcode-void.md",
+      "hash": "3c16172e707894b9ad4e7b353f2ca9da03deeb13621fa8f1a2383a4cda515d39",
+      "title": "POST /​v1/​payment/​qrcode/​void",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/certificate-signing-request.html": {
+      "file": "api-reference-index/references/certificate-signing-request.md",
+      "hash": "de363dbcd34b0c7dd28f219ecfddb5f8254fa5063968cf1b9d709712056e83ea",
+      "title": "Certificate Signing request",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/direct-debit-redirect-pay.html": {
+      "file": "api-reference-index/references/direct-debit-redirect-pay.md",
+      "hash": "f6818ec342747dcd4fb060fb190b11e6380788aeab1cd6df9f0605d85da80080",
+      "title": "DIRECT DEBIT PAYMENT RESPONSE CODE",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/direct-debit-registration-and-api-pay.html": {
+      "file": "api-reference-index/references/direct-debit-registration-and-api-pay.md",
+      "hash": "3a0c271259c4e0504da28e3a60377ac77a272733cda8e4a66f16c3604f5dda75",
+      "title": "DIRECT DEBIT REGISTRATION RESPONSE CODE",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/example-code-encryption-decryption.html": {
+      "file": "api-reference-index/references/example-code-encryption-decryption.md",
+      "hash": "a2179221117ae9ecbccd8ec902fb98e7d8124e05146e1bb55e891da3079a110b",
+      "title": "Example Code for Encryption and Decryption",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/generic-response-codes.html": {
+      "file": "api-reference-index/references/generic-response-codes.md",
+      "hash": "249ce6b96ab2a2e15426975a9bbe5a7f8478aabec6f5d02f8c2b48a9db539dc9",
+      "title": "Generic Response Codes",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/api-reference-index/references/glossary.html": {
+      "file": "api-reference-index/references/glossary.md",
+      "hash": "9d2d235c519ef4e4a44b4933b8845f45187bc031500dd23829606aa85f12904a",
+      "title": "Glossary",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/basics/authentication.html": {
+      "file": "documentation/basics/authentication.md",
+      "hash": "8f66ca271804212bb16d913cab3eef9220a6b3ea42cd9a848d3c493c603c0516",
+      "title": "Authentication/​Authorization",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/basics/developer-mae-manee-sandbox.html": {
+      "file": "documentation/basics/developer-mae-manee-sandbox.md",
+      "hash": "69bcab364a7195ecb73699aa7afac9bc055d1101ef6dff8adc73b9be5c6c2095",
+      "title": "Sandbox > Mae Manee Simulator App",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/basics/developer-sandbox.html": {
+      "file": "documentation/basics/developer-sandbox.md",
+      "hash": "8843b369a387ffb60935734ad6bd74bd844feb07ec885fba7830a71451e84cb7",
+      "title": "Sandbox > SCB EASY Simulator App",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/basics/getting-started.html": {
+      "file": "documentation/basics/getting-started.md",
+      "hash": "bcef307a68254280953569af8b1d6cc5750f684d6f1bfdf23b6244255d053c65",
+      "title": "Getting Started",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/customer-information/sharing-customer-profile.html": {
+      "file": "documentation/customer-information/sharing-customer-profile.md",
+      "hash": "6f9fa2fbbdba55d745a34fb80faa8ab17a4bb5e430b8c485b7dfba3f93a48824",
+      "title": "Sharing Customer Profiles",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/direct-debit-payment/direct-debit-redirect-pay.html": {
+      "file": "documentation/direct-debit-payment/direct-debit-redirect-pay.md",
+      "hash": "a961bdcce748a7463b9e052ad6c5035252a9fe7a5e07ad5e51c86bbd6c443416",
+      "title": "Direct Debit Redirect Pay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/direct-debit-payment/direct-debit-registration-and-api-pay.html": {
+      "file": "documentation/direct-debit-payment/direct-debit-registration-and-api-pay.md",
+      "hash": "01a2c328004955e721214a1e7a2e8df0ccb0ef17fc19253920bf5d17c9b293bb",
+      "title": "Direct Debit registration and API pay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/mae-manee-marchants/mae-manee-introduction.html": {
+      "file": "documentation/mae-manee-marchants/mae-manee-introduction.md",
+      "hash": "9b89a9e6ae6efe45092c8b87c2282f8a4ffca565db18af18e58a5b053a02519f",
+      "title": "Mae Manee App Introduction",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/mae-manee-marchants/mae-manee-payment-link.html": {
+      "file": "documentation/mae-manee-marchants/mae-manee-payment-link.md",
+      "hash": "331ed77eaa11e540f668933fb342d27f2b164c17baccfe085f2fa29114e90dec",
+      "title": "Mae Manee Payment​ Link",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/mae-manee-marchants/mae-manee-qr-payment.html": {
+      "file": "documentation/mae-manee-marchants/mae-manee-qr-payment.md",
+      "hash": "5668eeff5362879701f004c494b82224cdb45ea679a2723e706ec896d6af7ddb",
+      "title": "Mae Manee QR Code Payment​",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/mae-manee-marchants/mae-manee-sharing-profile.html": {
+      "file": "documentation/mae-manee-marchants/mae-manee-sharing-profile.md",
+      "hash": "a5988ae603e3517d5da649b26f46c67d60ef653cec49db6978f4cc5bb1427abf",
+      "title": "Sharing Mae Manee Merchant Profile​",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/pay-with-scb/payment-via-scb.html": {
+      "file": "documentation/pay-with-scb/payment-via-scb.md",
+      "hash": "52d7e59c6631969fcfb9d6487547e7cb272f0779712db9bf7357ccfd28856c4b",
+      "title": "SCB EASY App Payment",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/qr-payment/alipay-wechat.html": {
+      "file": "documentation/qr-payment/alipay-wechat.md",
+      "hash": "06a178f46174716b028f7f1f3e172a966efee7386f6a68e48789373638199640",
+      "title": "Alipay+ or WeChatPay",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/qr-payment/api-credit-debit-transfer.html": {
+      "file": "documentation/qr-payment/api-credit-debit-transfer.md",
+      "hash": "2c35b96663e1e4f0a2572773a7688f9f20302fce904ac9df69198768b96f5a62",
+      "title": "API Credit /​ Debit Transfer",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/qr-payment/payment-confirmation.html": {
+      "file": "documentation/qr-payment/payment-confirmation.md",
+      "hash": "9b2c6b4530d524a543a7220368012f97e0a5a7305a49ea2991bfc874375a2f28",
+      "title": "Payment Confirmation",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    },
+    "#/documents/documentation/qr-payment/thai-qr.html": {
+      "file": "documentation/qr-payment/thai-qr.md",
+      "hash": "250a962d0caea46a56e1b0849c853cd39eebd236fc56276870637c3619c3d30f",
+      "title": "QR Code Payment",
+      "changedAt": "2026-10-01T12:28:41.813Z",
+      "lastChecked": "2026-10-01T12:28:41.813Z"
+    }
+  }
+}

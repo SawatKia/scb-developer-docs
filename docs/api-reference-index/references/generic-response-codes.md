@@ -1,0 +1,43 @@
+---
+source_url: "https://developer.scb/#/documents/api-reference-index/references/generic-response-codes.html"
+source_route: "#/documents/api-reference-index/references/generic-response-codes.html"
+source: SCB Developer Portal
+content_hash: 249ce6b96ab2a2e15426975a9bbe5a7f8478aabec6f5d02f8c2b48a9db539dc9
+---
+
+# Generic Response Codes
+
+| HTTP Status Code | Business Code | Description |
+| :-- | :-- | :-- |
+| 200 | 1000 | Success |
+| 200 | 1000 | Data successfully updated |
+| 201 | 1000 | Creation successful |
+| 202 | 1000 | The request has been received and presumed to run in the background |
+| 204 | 1000 | Data successfully deleted |
+| 400 | 1101 | Missing required parameters |
+| 400 | 1102 | Invalid parameters entered |
+| 400 | 1103 | Empty string input not supported |
+| 404 | 1104 | Requested entity record does not exist |
+| 400 | 1105 | Unrecognized field name was entered - Please check spelling and/or refer to the API docs for correct name |
+| 400 | 1111 | Data entry duplicated with existing |
+| 501 | 4101 | Current channel is not supported |
+| 400 | 8101 | Invalid response from downstream service |
+| 500 | 8101 | Invalid response from downstream service |
+| 400 | 8102 | Payment API error code |
+| 500 | 8901 | Database error |
+| 500 | 8902 | Error getting mysql\_pool connection |
+| 400 | 9100 | Required standard headers |
+| 401 | 9100 | Missing required authorization credentials |
+| 401 | 9100 | Authorization credentials required |
+| 401 | 9300 | Invalid/expired temporary token |
+| 401 | 9500 | Invalid apikey provided |
+| 401 | 9500 | Invalid authorization credentials |
+| 403 | 9503 | Invalid access rights |
+| 500 | 9700 | Generic server side error |
+| 405 | 9900 | Wrong http method requested on endpoint |
+| 415 | 9900 | Unsupported content type defined |
+| 500 | 9900 | Threat has been detected |
+| 502 | 9900 | Invalid response from upstream server |
+| 503 | 9900 | Server is currently unavailable because traffic overload or it is down for maintenance |
+| 503 | 9900 | System maintenance in progress. We will be back shortly. |
+| 504 | 9900 | API Request Timeout |
