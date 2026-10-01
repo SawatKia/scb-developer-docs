@@ -1,0 +1,7 @@
+{
+  "projectTitle": "SCB Developer Portal Docs",
+  "description": "Markdown mirror of the SCB Developer Portal API documentation (QR payments, bill payment, etc.)",
+  "folders": ["docs"],
+  "excludeFolders": ["crawler", "node_modules", ".debug"],
+  "excludeFiles": ["README.md", "scrape-manifest.json"]
+}
